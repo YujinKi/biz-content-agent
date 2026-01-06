@@ -17,7 +17,6 @@ import asyncio
 import random
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-import anthropic
 import google.generativeai as genai
 import vertexai
 from vertexai.generative_models import GenerativeModel as VertexGenerativeModel, Part
@@ -496,7 +495,7 @@ class MasterPlanningAgent:
         image_data: Dict[str, str],
         brand_context: str
     ) -> List[Dict[str, Any]]:
-        """Claude를 사용하여 스토리보드 생성"""
+        """Vertex AI Gemini를 사용하여 스토리보드 생성"""
 
         # 트랜지션 평균 길이 계산 (컷 수 - 1 = 트랜지션 수)
         num_transitions = cut_count - 1
@@ -826,9 +825,9 @@ class MasterPlanningAgent:
             return storyboard
 
         except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse Claude response as JSON: {str(e)}")
+            logger.error(f"Failed to parse Gemini response as JSON: {str(e)}")
             logger.error(f"Response text: {response_text}")
-            raise ValueError(f"Invalid JSON response from Claude: {str(e)}")
+            raise ValueError(f"Invalid JSON response from Gemini: {str(e)}")
 
 
 class ImageGenerationAgent:
