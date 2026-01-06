@@ -9,8 +9,8 @@ Contents Creator는 LLM Agent를 활용하여 블로그, SNS, 동영상 콘텐�
 ### 핵심 기능
 
 - **AI 콘텐츠 생성**: Gemini를 활용한 블로그/SNS 콘텐츠 자동 생성
-- **AI 이미지 생성**: Gemini 2.0 Flash, Stable Diffusion 기반 이미지 생성
-- **AI 동영상 생성**: Replicate API (Stable Video Diffusion, LTX-Video) 기반 동영상 제작
+- **AI 이미지 생성**: Gemini 2.5 Flash Image 기반 이미지 생성
+- **AI 동영상 생성**: fal.ai (Kling) 기반 AI 동영상 제작
 - **카드뉴스 생성**: 자동 레이아웃 및 디자인 적용 카드뉴스 제작
 - **브랜드 분석**: Multi-Agent Pipeline으로 블로그/Instagram/YouTube 콘텐츠 분석 및 스타일 추출
 - **멀티 플랫폼 연동**: YouTube, Facebook, Instagram, X(Twitter), Threads, TikTok, WordPress OAuth 연동
@@ -245,8 +245,8 @@ contents_creator/
 
 1. **레포지토리 복제**
    ```bash
-   git clone https://github.com/KernelAcademy-AICamp/ai-camp-2nd-llm-agent-service-project-contents-team.git
-   cd ai-camp-2nd-llm-agent-service-project-contents-team
+   git clone https://github.com/YujinKi/biz-content-agent.git
+   cd biz-content-agent
    ```
 
 2. **프론트엔드 의존성 설치**
@@ -378,7 +378,7 @@ Supabase는 Connection Pooler를 제공합니다:
 
 ```env
 SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
-SUPABASE_KEY=your-supabase-anon-key
+SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
 ---
@@ -472,14 +472,13 @@ Multi-Agent 워크플로우를 통한 고품질 콘텐츠 생성:
 - YouTube 설명
 
 ### 3. AI 이미지 생성
-- Google Gemini 2.0 Flash (기본)
-- Hugging Face Stable Diffusion 2.1 (대체)
+- Google Gemini 2.5 Flash Image (기본)
 - 브랜드 분석 기반 프롬프트 자동 강화
 - 스타일 선호도 적용
 
 ### 4. AI 동영상 생성
-- **텍스트 → 동영상**: LTX-Video (Replicate)
-- **이미지 → 동영상**: Stable Video Diffusion
+- **텍스트 → 동영상**: fal.ai Kling
+- **이미지 → 동영상**: fal.ai Kling
 - 생성 진행 상태 실시간 추적
 - 동영상 메타데이터 저장
 
