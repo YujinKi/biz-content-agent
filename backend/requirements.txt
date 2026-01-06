@@ -14,10 +14,8 @@ google-cloud-aiplatform>=1.71.0
 google-cloud-storage
 google-auth>=2.23.0
 fal-client>=0.4.0
-anthropic==0.39.0
 Pillow==11.0.0
 psycopg2-binary==2.9.9
-replicate==0.34.1
 cloudinary==1.44.1
 supabase>=2.0.0
 moviepy==2.2.1

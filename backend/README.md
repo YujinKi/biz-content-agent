@@ -5,7 +5,7 @@ FastAPI 기반 AI 콘텐츠 제작 및 멀티 플랫폼 관리 백엔드 서비�
 ## 주요 기능
 
 ### AI 콘텐츠 생성
-- **AI 텍스트 생성**: Claude, Gemini API를 활용한 블로그/SNS 콘텐츠 자동 생성
+- **AI 텍스트 생성**: Gemini API를 활용한 블로그/SNS 콘텐츠 자동 생성
 - **AI 이미지 생성**: Gemini 2.0 Flash, Stable Diffusion 기반 이미지 생성
 - **AI 동영상 생성**: Replicate API (LTX-Video, Stable Video Diffusion) 기반 동영상 제작
 - **카드뉴스 생성**: 자동 레이아웃 및 디자인 적용 카드뉴스 제작
@@ -46,10 +46,8 @@ FastAPI 기반 AI 콘텐츠 제작 및 멀티 플랫폼 관리 백엔드 서비�
 | 기술 | 용도 |
 | :--- | :--- |
 | Google Gemini API | 이미지 생성, 텍스트 생성, 프롬프트 최적화 |
-| Anthropic Claude API | 콘텐츠 생성, 브랜드 분석, 품질 검증 |
-| Google Vertex AI | Google Cloud 기반 AI 서비스 |
-| Hugging Face | Stable Diffusion 2.1 이미지 생성 |
-| Replicate API | AI 동영상 생성 (LTX-Video, Stable Video Diffusion) |
+| Google Vertex AI | Google Cloud 기반 AI 서비스 (Gemini 2.5), 브랜드 분석, 품질 검증 |
+| fal.ai (Kling) | AI 동영상 생성 (Image-to-Video) |
 
 ---
 
@@ -154,34 +152,51 @@ ENV=development
 CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
 
 # ===== OAuth 2.0 =====
+# Google
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 GOOGLE_REDIRECT_URI=http://localhost:8000/api/oauth/google/callback
 
+# Kakao
 KAKAO_CLIENT_ID=your-kakao-rest-api-key
 KAKAO_REDIRECT_URI=http://localhost:8000/api/oauth/kakao/callback
 
+# Facebook
 FACEBOOK_CLIENT_ID=your-facebook-app-id
 FACEBOOK_CLIENT_SECRET=your-facebook-app-secret
 FACEBOOK_REDIRECT_URI=http://localhost:8000/api/oauth/facebook/callback
 
+# Instagram
+INSTAGRAM_APP_ID=your-instagram-app-id
+REACT_APP_INSTAGRAM_APP_ID=your-instagram-app-id
+INSTAGRAM_REDIRECT_URI=http://localhost:8000/api/instagram/callback
+
+# X (Twitter)
 X_CLIENT_ID=your-x-client-id
 X_CLIENT_SECRET=your-x-client-secret
+X_REDIRECT_URI=http://127.0.0.1:8000/api/x/callback
+
+# Threads
+THREADS_APP_ID=your-threads-app-id
+THREADS_APP_SECRET=your-threads-app-secret
+THREADS_REDIRECT_URI=http://localhost:8000/api/threads/callback
+
+# YouTube (Google OAuth 재사용)
+YOUTUBE_REDIRECT_URI=http://localhost:8000/api/youtube/callback
 
 # ===== AI API Keys =====
 GOOGLE_API_KEY=your-google-api-key
-ANTHROPIC_API_KEY=your-anthropic-api-key
-HUGGINGFACE_API_KEY=your-huggingface-api-key
-REPLICATE_API_TOKEN=your-replicate-api-token
+REACT_APP_GEMINI_API_KEY=your-gemini-api-key
+FAL_KEY=your-fal-api-key
 
-# ===== Google Cloud (Optional) =====
-GOOGLE_APPLICATION_CREDENTIALS=secrets/google-cloud-key.json
-GOOGLE_CLOUD_PROJECT=your-project-id
-GOOGLE_CLOUD_LOCATION=asia-northeast1
+# ===== Google Cloud (Vertex AI) =====
+GOOGLE_CLOUD_PROJECT=your-google-cloud-project-id
+GOOGLE_APPLICATION_CREDENTIALS=path/to/your-service-account-key.json
 
-# ===== Supabase Storage (Optional) =====
-SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
-SUPABASE_KEY=your-supabase-anon-key
+# ===== Supabase Storage =====
+SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 ```
 
 안전한 시크릿 키 생성:
