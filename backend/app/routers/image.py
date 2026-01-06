@@ -232,7 +232,7 @@ async def generate_image(request: ImageGenerateRequest, db: Session = Depends(ge
 
                     async with httpx.AsyncClient(timeout=180.0) as client:
                         response = await client.post(
-                            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={google_api_key}",
+                            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={google_api_key}",
                             json=request_body,
                             headers={"Content-Type": "application/json"}
                         )
