@@ -374,7 +374,6 @@ SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 |------|------|--------|
 | 기유진 | AI 개발, Backend | [@YujinKi](https://github.com/YujinKi) |
 | 김종주 | Frontend, Backend | [@jonjour99](https://github.com/jonjour99) |
-| 
 
 ### 프로젝트 정보
 
