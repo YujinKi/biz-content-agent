@@ -1,11 +1,11 @@
-# BizContent AI
+# Contents Creator - AI 기반 콘텐츠 제작 플랫폼
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![React 19.2](https://img.shields.io/badge/react-19.2-blue.svg)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688.svg)](https://fastapi.tiangolo.com/)
 
-> **소상공인을 위한 AI 콘텐츠 크리에이터**
+> **소상공인 및 1인 사업자를 위한 AI 콘텐츠 크리에이터**
 
 AI Agent 기반 마케팅 콘텐츠 자동 생성 플랫폼 — 블로그, SNS, 동영상을 한 번에 생성하고 7개 플랫폼에 통합 발행
 
