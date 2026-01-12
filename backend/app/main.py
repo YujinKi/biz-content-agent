@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from .routers import auth, oauth, image, generated_videos, cardnews, onboarding, ai_recommendations, user, chat, brand_analysis, ai_video_generation, ai_content, published_content, dashboard, credits, templates
-from .routers.sns import blog, youtube, facebook, instagram, x, threads, tiktok, wordpress
+from .routers.sns import youtube, facebook, instagram, x, threads, tiktok, wordpress
 from .database import engine, Base
 from .scheduler import start_scheduler, stop_scheduler
 
@@ -136,7 +136,6 @@ app.include_router(image.router)
 app.include_router(cardnews.router)
 app.include_router(onboarding.router)
 app.include_router(ai_recommendations.router)
-app.include_router(blog.router)
 app.include_router(chat.router)
 app.include_router(brand_analysis.router)
 app.include_router(youtube.router)
