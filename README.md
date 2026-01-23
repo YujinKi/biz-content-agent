@@ -16,12 +16,8 @@ AI Agent 기반 마케팅 콘텐츠 자동 생성 플랫폼 — 블로그, SNS, 
 <!-- TODO: GitHub Issue에 동영상 업로드 후 아래 링크 교체 -->
 <!-- 업로드 방법: Issues → New Issue → 동영상 드래그앤드롭 → 생성된 URL 복사 -->
 
+https://github.com/user-attachments/assets/64f464b3-c711-4e7c-ad7c-29b65036f96a
 
-<!-- 업로드 완료 후 위 코드블록을 제거하고 아래처럼 수정:
-
-https://github.com/user-attachments/assets/fb1ea390-018a-432c-b721-3f20dda68017.mp4
-
--->
 
 ---
 
